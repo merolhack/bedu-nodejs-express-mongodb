@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  div.row
+    div(class="col-md-4")
+      div.selection-user
+        img(src="https://picsum.photos/150/150", class="rounded-circle")
+        span Username
+    div(class="col-md-8")
+      div(class="card mb-3")
+        div.card-header= title 
+          small Published Date
+        div.card-body
+          p Content
+        

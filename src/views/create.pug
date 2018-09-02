@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  h1= title
+  hr
+  div.row
+    div(class="col-md-4")
+      div(class="selection-user text-center")
+        img(src="https://picsum.photos/150/150", class="rounded-circle img-fluid ")
+        hr
+        span Username
+    div(class="col-md-8")
+      div(class="card mb-3")
+        div.card-header Question information
+        div.card-body
+          form(name="form-create" id="form-create")
+            div.form-group
+              label(for="title") Title:
+              input(class="form-control", placeholder="Enter your title", name="title" id="title" required)
+            div.form-group
+              label(for="content") Content:
+              textarea(class="form-control", placeholder="Enter your content", name="content", id="content" required)
+            div.form-group
+              label(for="author") Username:
+              textarea(class="form-control", placeholder="Enter your username", name="author", id="author" required)
+            div.form-group
+              label(for="tags") Tags:
+              input(class="form-control", placeholder="Enter your tags separated by commas", name="tags", id="tags" required)
+            div.form-group
+              button(class="btn btn-success btn-block" type="submit" id="btn-create") Create
+  script(src="/js/create.js")

@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  h1= title
+  hr
+  div.row
+    div(class="col-md-4")
+      div.form-search
+        form
+          div.form-group
+            input(class="form-control", placeholder="Find post...")
+          div.form-group
+            a(class="btn btn-primary btn-block" href="/create") Make a post
+      div.tags-section
+      h4 Tags:
+        ul.list-group
+          li.list-group-item NodeJS
+          li.list-group-item Express
+          li.list-group-item Pug
+          li.list-group-item MongoDB
+          li.list-group-item Nodemon
+    div(class="col-md-8")
+      each question, index in questions
+        div(class="card mb-3")
+          div.card-header #{question.title} 
+            small #{question.createdAt} 
+          div.card-body
+            p #{question.content} 
+        

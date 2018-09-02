@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    header.header
+      nav(class="navbar navbar-dark bg-dark shadow-sm")
+        a(href="/", class="navbar-brand d-flex align-items-center") Express Q/A
+    main(class="main p-1")
+      div.container
+        block content
+    script(src="/js/main.js")
